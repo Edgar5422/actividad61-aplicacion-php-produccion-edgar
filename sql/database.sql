@@ -1,15 +1,21 @@
-CREATE TABLE empleados (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  apellido VARCHAR(100) NOT NULL,
-  nombre VARCHAR(100) NOT NULL,
-  edad INT UNSIGNED NOT NULL,
-  puesto VARCHAR(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE pilotos_copilotos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_piloto VARCHAR(50) NOT NULL,
+    apellido_piloto VARCHAR(50) NOT NULL,
+    nacionalidad_piloto VARCHAR(50) NOT NULL,
+    nombre_copiloto VARCHAR(50) NOT NULL,
+    apellido_copiloto VARCHAR(50) NOT NULL,
+    nacionalidad_copiloto VARCHAR(50) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Coloma', 'Javier', 25, 'Contable');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Oviedo', 'Carmen', 34, 'Administrativo');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Vargas', 'Pascual', 19, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Donoso', 'Maria', 45, 'Gerente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Celis', 'Manuel', 56, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Palencia', 'Jana', 31, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Zamanillo', 'Pedro', 63, 'Repartidor');
+INSERT INTO pilotos_copilotos (nombre_piloto, apellido_piloto, nacionalidad_piloto, nombre_copiloto, apellido_copiloto, nacionalidad_copiloto) VALUES
+('Sébastien', 'Loeb', 'Francia', 'Daniel', 'Elena', 'Mónaco'),
+('Carlos', 'Sainz', 'España', 'Lucas', 'Cruz', 'España'),
+('Thierry', 'Neuville', 'Bélgica', 'Martijn', 'Wydaeghe', 'Bélgica'),
+('Ott', 'Tänak', 'Estonia', 'Martin', 'Järveoja', 'Estonia'),
+('Kalle', 'Rovanperä', 'Finlandia', 'Jonne', 'Halttunen', 'Finlandia'),
+('Elfyn', 'Evans', 'Reino Unido', 'Scott', 'Martin', 'Reino Unido'),
+('Dani', 'Sordo', 'España', 'Cándido', 'Carrera', 'España'),
+('Esapekka', 'Lappi', 'Finlandia', 'Janne', 'Ferm', 'Finlandia'),
+('Gus', 'Greensmith', 'Reino Unido', 'Jonas', 'Andersson', 'Suecia'),
+('Adrien', 'Fourmaux', 'Francia', 'Alexandre', 'Coria', 'Francia');
